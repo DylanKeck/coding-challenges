@@ -1,19 +1,8 @@
-function solution(str, ending){
-    return str.endsWith(ending)
-}
-
-
-function friend(friends){
-    return friends.filter((friend) =>
-        friend.length === 4
-    )
-}
-var number = function(busStops){
-    let people = 0;
-
-    for (let [on, off] of busStops) {
-        people += on - off;
+function removeUrlAnchor(url){
+    let newUrl = ''
+    if (url.includes('#')) {
+        const indexUrl = url.indexOf('#')
+        return newUrl = url.slice(0, indexUrl)
     }
-
-    return people;
+    else return url
 }
